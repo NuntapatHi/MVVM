@@ -16,6 +16,16 @@
 		2D445B002BC668D6004329E3 /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445AFF2BC668D6004329E3 /* MVVMTests.swift */; };
 		2D445B0A2BC668D6004329E3 /* MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B092BC668D6004329E3 /* MVVMUITests.swift */; };
 		2D445B0C2BC668D6004329E3 /* MVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B0B2BC668D6004329E3 /* MVVMUITestsLaunchTests.swift */; };
+		2D445B1A2BC66ADB004329E3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B182BC66ADB004329E3 /* MainViewController.swift */; };
+		2D445B1B2BC66ADB004329E3 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D445B192BC66ADB004329E3 /* MainViewController.xib */; };
+		2D445B212BC66B6C004329E3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B202BC66B6C004329E3 /* BaseViewController.swift */; };
+		2D445B242BC66CF1004329E3 /* BaseViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B232BC66CF1004329E3 /* BaseViewModelType.swift */; };
+		2D445B262BC66E87004329E3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B252BC66E87004329E3 /* MainViewModel.swift */; };
+		2D445B282BC67E10004329E3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B272BC67E10004329E3 /* NetworkService.swift */; };
+		2D445B2B2BC6807F004329E3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B2A2BC6807F004329E3 /* Endpoint.swift */; };
+		2D445B2D2BC6830D004329E3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B2C2BC6830D004329E3 /* NetworkError.swift */; };
+		2D445B352BC689E8004329E3 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B342BC689E8004329E3 /* UserEntity.swift */; };
+		2D445B372BC68A23004329E3 /* BaseEntityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B362BC68A23004329E3 /* BaseEntityType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +59,16 @@
 		2D445B052BC668D6004329E3 /* MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D445B092BC668D6004329E3 /* MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMUITests.swift; sourceTree = "<group>"; };
 		2D445B0B2BC668D6004329E3 /* MVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2D445B182BC66ADB004329E3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2D445B192BC66ADB004329E3 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		2D445B202BC66B6C004329E3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2D445B232BC66CF1004329E3 /* BaseViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelType.swift; sourceTree = "<group>"; };
+		2D445B252BC66E87004329E3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		2D445B272BC67E10004329E3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2D445B2A2BC6807F004329E3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2D445B2C2BC6830D004329E3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		2D445B342BC689E8004329E3 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		2D445B362BC68A23004329E3 /* BaseEntityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntityType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +119,13 @@
 		2D445AE72BC668D5004329E3 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				2D445AE82BC668D5004329E3 /* AppDelegate.swift */,
-				2D445AEA2BC668D5004329E3 /* SceneDelegate.swift */,
-				2D445AEC2BC668D5004329E3 /* ViewController.swift */,
+				2D445B1D2BC66AF2004329E3 /* AppLayer */,
+				2D445B1C2BC66AE1004329E3 /* View */,
+				2D445B302BC68981004329E3 /* Model */,
+				2D445B222BC66CD9004329E3 /* BaseProtocol */,
+				2D445B292BC67E21004329E3 /* NetworkLayer */,
 				2D445AEE2BC668D5004329E3 /* Main.storyboard */,
 				2D445AF12BC668D6004329E3 /* Assets.xcassets */,
-				2D445AF32BC668D6004329E3 /* LaunchScreen.storyboard */,
 				2D445AF62BC668D6004329E3 /* Info.plist */,
 			);
 			path = MVVM;
@@ -125,6 +146,71 @@
 				2D445B0B2BC668D6004329E3 /* MVVMUITestsLaunchTests.swift */,
 			);
 			path = MVVMUITests;
+			sourceTree = "<group>";
+		};
+		2D445B1C2BC66AE1004329E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D445B1F2BC66B4C004329E3 /* Base */,
+				2D445B1E2BC66B18004329E3 /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D445B1D2BC66AF2004329E3 /* AppLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2D445AE82BC668D5004329E3 /* AppDelegate.swift */,
+				2D445AEA2BC668D5004329E3 /* SceneDelegate.swift */,
+				2D445AEC2BC668D5004329E3 /* ViewController.swift */,
+				2D445AF32BC668D6004329E3 /* LaunchScreen.storyboard */,
+			);
+			path = AppLayer;
+			sourceTree = "<group>";
+		};
+		2D445B1E2BC66B18004329E3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2D445B182BC66ADB004329E3 /* MainViewController.swift */,
+				2D445B192BC66ADB004329E3 /* MainViewController.xib */,
+				2D445B252BC66E87004329E3 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2D445B1F2BC66B4C004329E3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2D445B202BC66B6C004329E3 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		2D445B222BC66CD9004329E3 /* BaseProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				2D445B232BC66CF1004329E3 /* BaseViewModelType.swift */,
+				2D445B362BC68A23004329E3 /* BaseEntityType.swift */,
+			);
+			path = BaseProtocol;
+			sourceTree = "<group>";
+		};
+		2D445B292BC67E21004329E3 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2D445B272BC67E10004329E3 /* NetworkService.swift */,
+				2D445B2A2BC6807F004329E3 /* Endpoint.swift */,
+				2D445B2C2BC6830D004329E3 /* NetworkError.swift */,
+			);
+			path = "\U0010NetworkLayer";
+			sourceTree = "<group>";
+		};
+		2D445B302BC68981004329E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D445B342BC689E8004329E3 /* UserEntity.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +320,7 @@
 				2D445AF52BC668D6004329E3 /* LaunchScreen.storyboard in Resources */,
 				2D445AF22BC668D6004329E3 /* Assets.xcassets in Resources */,
 				2D445AF02BC668D5004329E3 /* Main.storyboard in Resources */,
+				2D445B1B2BC66ADB004329E3 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +345,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D445B262BC66E87004329E3 /* MainViewModel.swift in Sources */,
+				2D445B212BC66B6C004329E3 /* BaseViewController.swift in Sources */,
 				2D445AED2BC668D5004329E3 /* ViewController.swift in Sources */,
+				2D445B242BC66CF1004329E3 /* BaseViewModelType.swift in Sources */,
+				2D445B282BC67E10004329E3 /* NetworkService.swift in Sources */,
+				2D445B372BC68A23004329E3 /* BaseEntityType.swift in Sources */,
 				2D445AE92BC668D5004329E3 /* AppDelegate.swift in Sources */,
+				2D445B352BC689E8004329E3 /* UserEntity.swift in Sources */,
 				2D445AEB2BC668D5004329E3 /* SceneDelegate.swift in Sources */,
+				2D445B2B2BC6807F004329E3 /* Endpoint.swift in Sources */,
+				2D445B1A2BC66ADB004329E3 /* MainViewController.swift in Sources */,
+				2D445B2D2BC6830D004329E3 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
