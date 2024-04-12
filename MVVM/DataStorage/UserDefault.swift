@@ -27,73 +27,77 @@ protocol UserDefaultProtocol {
     func getUrl(forKey: Keys) -> URL?
     func getValue(forKey: Keys) -> Any?
     func deleteAllStoredDatas()
+    
 }
 
 class UserDefault: UserDefaultProtocol {
     
-    static let shared: UserDefaults = .standard
-    private init() { }
+    static let shared = UserDefault()
+    private let userDefault: UserDefaults
+    private init(userDefault: UserDefaults = .standard) {
+        self.userDefault = userDefault
+    }
     
     func add(value: Any, forKey key: Keys) {
-        UserDefault.shared.set(value, forKey: key.rawValue)
+        userDefault.set(value, forKey: key.rawValue)
     }
     
     func remove(forKey key: Keys) {
-        UserDefault.shared.removeObject(forKey: key.rawValue)
+        userDefault.removeObject(forKey: key.rawValue)
     }
     
     func getInteger(forKey key: Keys) -> Int? {
-        return UserDefault.shared.integer(forKey: key.rawValue)
+        return userDefault.integer(forKey: key.rawValue)
     }
     
     func getString(forKey key: Keys) -> String? {
-        return UserDefault.shared.string(forKey: key.rawValue)
+        return userDefault.string(forKey: key.rawValue)
     }
     
     func getBool(forKey key: Keys) -> Bool? {
-        return UserDefault.shared.bool(forKey: key.rawValue)
+        return userDefault.bool(forKey: key.rawValue)
     }
     
     func getData(forKey key: Keys) -> Data? {
-        return UserDefault.shared.data(forKey: key.rawValue)
+        return userDefault.data(forKey: key.rawValue)
     }
     
     func getObject(forKey key: Keys) -> Any? {
-        return UserDefault.shared.object(forKey: key.rawValue)
+        return userDefault.object(forKey: key.rawValue)
     }
     
     func getArray(forKey key: Keys) -> [Any]? {
-        return UserDefault.shared.array(forKey: key.rawValue)
+        return userDefault.array(forKey: key.rawValue)
     }
     
     func getDictionary(forKey key: Keys) -> [String : Any]? {
-        return UserDefault.shared.dictionary(forKey: key.rawValue)
+        return userDefault.dictionary(forKey: key.rawValue)
     }
     
     func getDouble(forKey key: Keys) -> Double? {
-        return UserDefault.shared.double(forKey: key.rawValue)
+        return userDefault.double(forKey: key.rawValue)
     }
     
     func getFloat(forKey key: Keys) -> Float? {
-        return UserDefault.shared.float(forKey: key.rawValue)
+        return userDefault.float(forKey: key.rawValue)
     }
     
     func getstringArray(forKey key: Keys) -> [String]? {
-        return UserDefault.shared.stringArray(forKey: key.rawValue)
+        return userDefault.stringArray(forKey: key.rawValue)
     }
     
     func getUrl(forKey key: Keys) -> URL? {
-        return UserDefault.shared.url(forKey: key.rawValue)
+        return userDefault.url(forKey: key.rawValue)
     }
     
     func getValue(forKey key: Keys) -> Any? {
-        return UserDefault.shared.value(forKey: key.rawValue)
+        return userDefault.value(forKey: key.rawValue)
     }
     
     func deleteAllStoredDatas() {
-        let datas: [String: Any] = UserDefault.shared.dictionaryRepresentation()
+        let datas: [String: Any] = userDefault.dictionaryRepresentation()
         datas.forEach({
-            UserDefault.shared.removeObject(forKey: $0.key)
+            userDefault.removeObject(forKey: $0.key)
         })
     }
     

@@ -26,6 +26,12 @@
 		2D445B2D2BC6830D004329E3 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B2C2BC6830D004329E3 /* NetworkError.swift */; };
 		2D445B352BC689E8004329E3 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B342BC689E8004329E3 /* UserEntity.swift */; };
 		2D445B372BC68A23004329E3 /* BaseEntityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B362BC68A23004329E3 /* BaseEntityType.swift */; };
+		2D445B3A2BC6F0E7004329E3 /* UseCaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B392BC6F0E6004329E3 /* UseCaseProvider.swift */; };
+		2D445B3C2BC6F108004329E3 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B3B2BC6F108004329E3 /* UserUseCase.swift */; };
+		2D445B3F2BC6F17E004329E3 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D445B3E2BC6F17E004329E3 /* UserDefault.swift */; };
+		2DB4D8C72BC8316C0028255C /* UITableViewCell+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4D8C62BC8316C0028255C /* UITableViewCell+Reuse.swift */; };
+		2DB4D8CB2BC836340028255C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4D8C92BC836340028255C /* UserCell.swift */; };
+		2DB4D8CC2BC836340028255C /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB4D8CA2BC836340028255C /* UserCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,12 @@
 		2D445B2C2BC6830D004329E3 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2D445B342BC689E8004329E3 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		2D445B362BC68A23004329E3 /* BaseEntityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntityType.swift; sourceTree = "<group>"; };
+		2D445B392BC6F0E6004329E3 /* UseCaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseProvider.swift; sourceTree = "<group>"; };
+		2D445B3B2BC6F108004329E3 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
+		2D445B3E2BC6F17E004329E3 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		2DB4D8C62BC8316C0028255C /* UITableViewCell+Reuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reuse.swift"; sourceTree = "<group>"; };
+		2DB4D8C92BC836340028255C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		2DB4D8CA2BC836340028255C /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +131,14 @@
 		2D445AE72BC668D5004329E3 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				2D445B402BC78169004329E3 /* Extension */,
 				2D445B1D2BC66AF2004329E3 /* AppLayer */,
 				2D445B1C2BC66AE1004329E3 /* View */,
 				2D445B302BC68981004329E3 /* Model */,
+				2D445B382BC6F0D1004329E3 /* UseCase */,
 				2D445B222BC66CD9004329E3 /* BaseProtocol */,
 				2D445B292BC67E21004329E3 /* NetworkLayer */,
+				2D445B3D2BC6F14D004329E3 /* DataStorage */,
 				2D445AEE2BC668D5004329E3 /* Main.storyboard */,
 				2D445AF12BC668D6004329E3 /* Assets.xcassets */,
 				2D445AF62BC668D6004329E3 /* Info.plist */,
@@ -174,6 +189,7 @@
 				2D445B182BC66ADB004329E3 /* MainViewController.swift */,
 				2D445B192BC66ADB004329E3 /* MainViewController.xib */,
 				2D445B252BC66E87004329E3 /* MainViewModel.swift */,
+				2DB4D8C82BC836240028255C /* Cell */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -211,6 +227,40 @@
 				2D445B342BC689E8004329E3 /* UserEntity.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2D445B382BC6F0D1004329E3 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				2D445B392BC6F0E6004329E3 /* UseCaseProvider.swift */,
+				2D445B3B2BC6F108004329E3 /* UserUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		2D445B3D2BC6F14D004329E3 /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				2D445B3E2BC6F17E004329E3 /* UserDefault.swift */,
+			);
+			path = DataStorage;
+			sourceTree = "<group>";
+		};
+		2D445B402BC78169004329E3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2DB4D8C62BC8316C0028255C /* UITableViewCell+Reuse.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2DB4D8C82BC836240028255C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2DB4D8C92BC836340028255C /* UserCell.swift */,
+				2DB4D8CA2BC836340028255C /* UserCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +371,7 @@
 				2D445AF22BC668D6004329E3 /* Assets.xcassets in Resources */,
 				2D445AF02BC668D5004329E3 /* Main.storyboard in Resources */,
 				2D445B1B2BC66ADB004329E3 /* MainViewController.xib in Resources */,
+				2DB4D8CC2BC836340028255C /* UserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,16 +398,21 @@
 			files = (
 				2D445B262BC66E87004329E3 /* MainViewModel.swift in Sources */,
 				2D445B212BC66B6C004329E3 /* BaseViewController.swift in Sources */,
+				2D445B3F2BC6F17E004329E3 /* UserDefault.swift in Sources */,
 				2D445AED2BC668D5004329E3 /* ViewController.swift in Sources */,
+				2DB4D8CB2BC836340028255C /* UserCell.swift in Sources */,
 				2D445B242BC66CF1004329E3 /* BaseViewModelType.swift in Sources */,
 				2D445B282BC67E10004329E3 /* NetworkService.swift in Sources */,
 				2D445B372BC68A23004329E3 /* BaseEntityType.swift in Sources */,
 				2D445AE92BC668D5004329E3 /* AppDelegate.swift in Sources */,
 				2D445B352BC689E8004329E3 /* UserEntity.swift in Sources */,
+				2D445B3C2BC6F108004329E3 /* UserUseCase.swift in Sources */,
 				2D445AEB2BC668D5004329E3 /* SceneDelegate.swift in Sources */,
+				2D445B3A2BC6F0E7004329E3 /* UseCaseProvider.swift in Sources */,
 				2D445B2B2BC6807F004329E3 /* Endpoint.swift in Sources */,
 				2D445B1A2BC66ADB004329E3 /* MainViewController.swift in Sources */,
 				2D445B2D2BC6830D004329E3 /* NetworkError.swift in Sources */,
+				2DB4D8C72BC8316C0028255C /* UITableViewCell+Reuse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

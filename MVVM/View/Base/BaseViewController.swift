@@ -12,6 +12,7 @@ class BaseViewController<T: BaseViewModelType>: UIViewController {
     
     var viewModel: T?
     
+    // MARK: - Initializer
     convenience init(viewModel: T? = nil, modalPresentationStyle: UIModalPresentationStyle = .fullScreen) {
         self.init(nibName: Self.viewControllerName, bundle: nil)
         self.modalPresentationStyle = modalPresentationStyle
@@ -19,15 +20,13 @@ class BaseViewController<T: BaseViewModelType>: UIViewController {
     }
     
     deinit {
-        print("Deinit \(Self.viewControllerName)")
+        print("♺ \(Self.viewControllerName) Deinited")
     }
     
-    private class var viewControllerName: String {
-        return String(describing: self)
-    }
-    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
         if let viewModel = viewModel {
             bindOutput(viewModel: viewModel)
             bindInput(viewModel: viewModel)
@@ -35,8 +34,14 @@ class BaseViewController<T: BaseViewModelType>: UIViewController {
         
     }
     
+    func setup() { }
+    
     func bindInput(viewModel: T) { }
     
     func bindOutput(viewModel: T) { }
+    
+    private class var viewControllerName: String {
+        return String(describing: self)
+    }
     
 }

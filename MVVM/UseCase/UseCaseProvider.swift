@@ -18,11 +18,10 @@ protocol UseCaseServiceServices {
 import Foundation
 
 class UseCaseProvider: UseCaseServiceProtocol {
-    static let shared  = UseCaseProvider
+    static let shared  = UseCaseProvider()
     let userDefault: UserDefault
     let networkService: NetworkService
     let bundle: Bundle
-    
     
     init(userDefault: UserDefault = UserDefault.shared,
          networkService: NetworkService = NetworkService.shared,
@@ -33,7 +32,10 @@ class UseCaseProvider: UseCaseServiceProtocol {
         self.bundle = bundle
     }
     
-    func provideUserUseCase() async -> UserUseCase {
-        return await UserUseCase(networkService: networkService, userDefault: userDefault)
+}
+
+extension UseCaseProvider: UseCaseServiceServices {
+    func provideUserUseCase() -> UserUseCase {
+        return UserUseCase(networkService: networkService, userDefault: userDefault)
     }
 }

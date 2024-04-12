@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         guard let window = window else { return }
-        let mainVM = MainViewModel()
+        let mainVM = MainViewModel(useCaseProvider: UseCaseProvider.shared)
         let mainVC = MainViewController(viewModel: mainVM)
         let wrappedNavigation = UINavigationController(rootViewController: mainVC)
         window.rootViewController = wrappedNavigation
